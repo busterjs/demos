@@ -6,16 +6,22 @@ Have a look at the package.json to see how the `npm test` command is setup for b
 
 ## Hybrid tests and HTML Scaffold tests
 
-Run browser tests by opening the html file in your browser.
+* Run browser tests by opening the html file in your browser.
 
 ## Buster static
 
-Run `buster-static`
+* Run `buster-static`
 
 ## Buster server
 
-Run `buster-server` on one terminal.
+* Run `buster-server` on one terminal.
+* Open the given url on your browser.
+* Run `buster-test` on a separate server.
 
-Open the given url on your browser.
+## Buster server with phantomjs
 
-Run `buster-test` on a separate server.
+* Install [phantomjs](http://phantomjs.org/)
+* Run `npm install` in the buster-server-tests directory
+* Run `buster-server`
+* On a separate terminal, run `phantomjs node_modules/buster/script/phantom.js &`
+* Run `buster-test`

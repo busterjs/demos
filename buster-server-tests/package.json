@@ -1,0 +1,15 @@
+{
+  "name": "hybrid-tests",
+  "version": "0.0.0",
+  "description": "Node test demo",
+  "main": "buster.js",
+  "scripts": {
+    "test": "./node_modules/buster/bin/buster-test --environment browser"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "buster": "~0.6.0"
+  }
+}
