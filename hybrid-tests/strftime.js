@@ -1,6 +1,5 @@
 // Based on https://gist.github.com/1904218
-
-var strftime = (function () {
+(function () {
     function strftime(date, format) {
 
         return (format + "").replace(/%([a-zA-Z])/g, function (m, f) {
@@ -52,5 +51,9 @@ var strftime = (function () {
         D: "%m/%d/%y"
     };
 
-    return strftime;
+    if(typeof module != 'undefined' && module.exports){
+        module.exports = strftime;
+    } else {
+        window.strftime = strftime;
+    }
 }());
