@@ -11,3 +11,11 @@ Run browser tests by opening the html file in your browser.
 ## Buster static
 
 Run `buster-static`
+
+## Buster server
+
+Run `buster-server` on one terminal.
+
+Open the given url on your browser.
+
+Run `buster-test` on a separate server.
