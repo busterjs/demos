@@ -1,16 +1,14 @@
-// This is unfinished demo code
-
-Date.prototype.strftime = (function () {
-    function strftime(format) {
-        var date = this;
+// Based on https://gist.github.com/1904218
+(function () {
+    function strftime(date, format) {
 
         return (format + "").replace(/%([a-zA-Z])/g, function (m, f) {
-            var formatter = Date.formats && Date.formats[f];
+            var formatter = formats && formats[f];
 
             if (typeof formatter == "function") {
-                return formatter.call(Date.formats, date);
+                return formatter.call(formats, date);
             } else if (typeof formatter == "string") {
-                return date.strftime(formatter);
+                return strftime(date, formatter);
             }
 
             return "%" + f;
@@ -22,7 +20,7 @@ Date.prototype.strftime = (function () {
         return (+num < 10 ? "0" : "") + num;
     }
 
-    Date.formats = {
+    var formats = {
         // Formatting methods
         d: function (date) {
             return zeroPad(date.getDate());
@@ -53,5 +51,5 @@ Date.prototype.strftime = (function () {
         D: "%m/%d/%y"
     };
 
-    return strftime;
+    window.strftime = strftime;
 }());
