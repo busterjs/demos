@@ -6,4 +6,8 @@ Have a look at the package.json to see how the `npm test` command is setup for b
 
 ## Hybrid tests and HTML Scaffold tests
 
-Run browser tests by opening the html file in your browser
+Run browser tests by opening the html file in your browser.
+
+## Buster static
+
+Run `buster-static`
