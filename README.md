@@ -8,20 +8,28 @@ Have a look at the package.json to see how the `npm test` command is setup for b
 
 * Run browser tests by opening the html file in your browser.
 
-## Buster static
+## Buster static tests
 
 * Run `buster-static`
 
-## Buster server
+## Buster server tests
 
 * Run `buster-server` on one terminal.
 * Open the given url on your browser.
 * Run `buster-test` on a separate server.
 
-## Buster server with phantomjs
+## Buster server tests with phantomjs
 
 * Install [phantomjs](http://phantomjs.org/)
 * Run `npm install` in the buster-server-tests directory
 * Run `buster-server`
 * On a separate terminal, run `phantomjs node_modules/buster/script/phantom.js &`
 * Run `buster-test`
+
+Follow the same instructions for the AMD example.
+
+## Buster server tests with AMD
+
+This example is shown using buster-server but can be easily adapted to the other ways of running browser tests.
+
+The file and directory structure is slightly different to show off some of the issues which might arise with path configurations.
