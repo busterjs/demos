@@ -30,6 +30,6 @@ Follow the same instructions for the AMD example.
 
 ## Buster server tests with AMD
 
-This example is shown using buster-server but can be easily adapted to the other ways of running browser tests.
+Both examples for require.js and curl.js are shown using buster-server but can be easily adapted to the other ways of running browser tests.
 
 The file and directory structure is slightly different to show off some of the issues which might arise with path configurations.
